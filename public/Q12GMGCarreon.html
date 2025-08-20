@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Nathan Raphael Carreon - Magnesium </h2>
+
+    <label>Meal Price: </label>
+    <input type="text" id="mealPrice"><br><br>
+
+    <label>Tip: </label>
+    <input type="text" id="tip"><br><br>
+
+    <label>Service Charge (%): </label>
+    <input type="text" id="serviceCharge"><br><br>
+
+    <button onclick="totalMeal()">Accept Input</button>
+
+    <p id="result">Total Meal: </p>
+
+    <script>
+        function totalMeal() {
+            let mp = parseFloat(document.getElementById("mealPrice").value);
+            let tip = parseFloat(document.getElementById("tip").value);
+            let sc = parseFloat(document.getElementById("serviceCharge").value);
+            
+            let totalCost = mp + tip + (sc / 100 * mp);
+            
+            document.getElementById("result").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
